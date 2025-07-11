@@ -3,7 +3,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { defaultMetadata } from "@/lib/meta";
 import ClientWrapper from "./client-wrapper"; 
-
+import {AuthProvider} from '@/context/AuthContext'
+import { Toaster } from "@/components/ui/sonner";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -26,7 +27,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <ClientWrapper>{children}</ClientWrapper>
+        <AuthProvider> 
+          <Toaster />
+          <ClientWrapper>{children}</ClientWrapper>
+        </AuthProvider>
       </body>
     </html>
   );

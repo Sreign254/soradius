@@ -22,6 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/portal/layout.js", "components/footer.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/portal/layout.js", "components/footer.tsx", "app/otp-verification/page.jsx", "app/portal/admin/users/create-user/page.jsx", "app/portal/admin/users/page.jsx", "app/portal/admin/users/update-user/page.jsx", "app/portal/admin/projects/page.jsx", "components/rich-text-editor-tiptap.jsx", "app/portal/customer/tickets/page.jsx", "app/portal/customer/page.jsx"],
   "exclude": ["node_modules"]
 }
